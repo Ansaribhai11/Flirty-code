@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Pyaar Ka Puzzle 💘</title>
+  <style>
+    body {
+      background: linear-gradient(#ff9a9e, #fad0c4);
+      font-family: 'Comic Sans MS', cursive;
+      text-align: center;
+      padding: 40px;
+    }
+    h1 {
+      font-size: 45px;
+      color: #d10068;
+    }
+    .puzzle {
+      margin-top: 40px;
+      background: #fff0f5;
+      padding: 20px;
+      border-radius: 20px;
+      display: inline-block;
+      max-width: 600px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    }
+    .puzzle p {
+      font-size: 20px;
+    }
+    input[type="text"] {
+      padding: 10px;
+      font-size: 18px;
+      border-radius: 10px;
+      border: none;
+      width: 80%;
+    }
+    button {
+      margin-top: 15px;
+      padding: 10px 20px;
+      font-size: 18px;
+      border: none;
+      border-radius: 10px;
+      background-color: #ff69b4;
+      color: white;
+      cursor: pointer;
+    }
+    .result {
+      font-size: 18px;
+      color: green;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Pyaar Ka Puzzle 💘</h1>
+  <p>Jab tak tum saare puzzles solve nahi karti, tab tak main tumhara hoon 😜</p>
+
+  <div class="puzzle">
+    <p><b>Puzzle 1:</b> Main hoon bina aawaz ka ishara, har dil mujhmein pyar ka nazara dekhta hai. Main kya hoon?</p>
+    <input type="text" id="p1">
+    <button onclick="checkPuzzle1()">Submit</button>
+    <div class="result" id="r1"></div>
+  </div>
+
+  <div class="puzzle">
+    <p><b>Puzzle 2:</b> Tumhara smile meri recharge hai. Batao kaunsa number main call karu? 😏</p>
+    <input type="text" id="p2">
+    <button onclick="checkPuzzle2()">Submit</button>
+    <div class="result" id="r2"></div>
+  </div>
+
+  <div class="puzzle">
+    <p><b>Puzzle 3:</b> Raat ko tumhare sapne mein kaun aata hai? 😘</p>
+    <input type="text" id="p3">
+    <button onclick="checkPuzzle3()">Submit</button>
+    <div class="result" id="r3"></div>
+  </div>
+
+  <script>
+    function checkPuzzle1() {
+      const ans = document.getElementById("p1").value.toLowerCase();
+      document.getElementById("r1").innerText = (ans.includes("aankh") || ans.includes("nazar")) ? "Sahi jawaab! Tum meri aankhon ka noor ho 💖" : "Galat... par cute attempt tha 😘";
+    }
+    function checkPuzzle2() {
+      const ans = document.getElementById("p2").value.toLowerCase();
+      document.getElementById("r2").innerText = (ans.includes("tumhara") || ans.includes("baby")) ? "Ohooo! Tum to meri jaan ho 😍" : "Wrong number... try again cutie!";
+    }
+    function checkPuzzle3() {
+      const ans = document.getElementById("p3").value.toLowerCase();
+      document.getElementById("r3").innerText = (ans.includes("tum") || ans.includes("arslan")) ? "Sachiiiiii? Ab to shaadi pakki 😭❤️" : "Jhoot mat boloooo, main hi hoon na 😭";
+    }
+  </script>
+</body>
+</html>
